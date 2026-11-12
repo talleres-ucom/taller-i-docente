@@ -1,27 +1,25 @@
 name: CI
 
 on:
-  workflow_dispatch:
-  pull_request:
   push:
     branches: [ main ]
+  pull_request:
 
 jobs:
-  test:
+  pruebas:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Traer el código del repositorio
-      uses: actions/checkout@v7
+      - name: Traer el codigo del repositorio
+        uses: actions/checkout@v7
 
       - name: Instalar uv
-      uses: astral-sh/setup-uv@v9.0.0
+        uses: astral-sh/setup-uv@v9.0.0
 
       - name: Instalar el proyecto y sus dependencias
-      run: uv sync --locked
+        run: uv sync --locked
 
       - name: Revisar el estilo con ruff
-      run: uv run ruff check
-      
+        run: uv run ruff check
+
       - name: Correr las pruebas
-      run: uv run pytest
+        run: uv run pytest
