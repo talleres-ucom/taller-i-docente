@@ -4,6 +4,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 
+from arandu.unicidad import ya_cursa
 from arandu.ventana import en_ventana
 
 
@@ -19,11 +20,24 @@ def evaluar(entrada: dict) -> dict:
     instante = datetime.fromisoformat(entrada["solicitud"]["instante"])
     apertura = datetime.fromisoformat(entrada["periodo"]["apertura"])
     cierre = datetime.fromisoformat(entrada["periodo"]["cierre"])
+    comisiones = {c["id"]: c for c in entrada["comisiones"]}
+    pedida = comisiones[entrada["solicitud"]["comision"]]
+    id_estudiante = entrada["estudiante"]["id"]
+    activas_propias = [
+        i for i in entrada["inscripciones"]
+        if i["estudiante"] == id_estudiante and i["estado"] == "activa"
+    ]
 
     # Negocio: las reglas reciben datos ya convertidos, en el orden de R8.
     if not en_ventana(instante, apertura, cierre):
         return {"resultado": "rechazada", "motivo": "R1"}
-    # Las demás reglas van acá, en este orden: R2, R7, R4, R5, R3.
+    # R2 va acá (parte 3).
+    materias_activas = [comisiones[i["comision"]]["materia"] for i in activas_propias]
+    if ya_cursa(pedida["materia"], materias_activas):
+        return {"resultado": "rechazada", "motivo": "R7"}
+    # R4 va acá (parte 3).
+    # R5 va acá (parte 2).
+    # R3 va acá (parte 3).
     return {"resultado": "aceptada"}
 
 

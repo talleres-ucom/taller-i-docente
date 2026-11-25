@@ -1,0 +1,278 @@
+{
+  "caso": "R1-antes-de-la-apertura",
+  "descripcion": "Un minuto antes de la apertura",
+  "entrada": {
+    "plan": {
+      "nota_minima": 2
+    },
+    "periodo": {
+      "apertura": "2027-02-01T08:00:00-03:00",
+      "cierre": "2027-02-10T23:59:00-03:00",
+      "plazo_baja": "2027-03-15T23:59:00-03:00"
+    },
+    "estudiante": {
+      "id": "E01",
+      "historial": [
+        {
+          "materia": "PRG1",
+          "nota": 4
+        },
+        {
+          "materia": "MAT1",
+          "nota": 1
+        },
+        {
+          "materia": "ALG",
+          "nota": 2
+        }
+      ]
+    },
+    "materias": [
+      {
+        "codigo": "PRG1",
+        "correlativas": []
+      },
+      {
+        "codigo": "PRG2",
+        "correlativas": [
+          "PRG1"
+        ]
+      },
+      {
+        "codigo": "BD1",
+        "correlativas": []
+      },
+      {
+        "codigo": "EST",
+        "correlativas": [
+          "MAT1"
+        ]
+      },
+      {
+        "codigo": "ALG2",
+        "correlativas": [
+          "ALG"
+        ]
+      },
+      {
+        "codigo": "RED",
+        "correlativas": []
+      },
+      {
+        "codigo": "SO",
+        "correlativas": []
+      },
+      {
+        "codigo": "ING",
+        "correlativas": []
+      },
+      {
+        "codigo": "ETI",
+        "correlativas": []
+      },
+      {
+        "codigo": "WEB",
+        "correlativas": []
+      },
+      {
+        "codigo": "TAL",
+        "correlativas": []
+      },
+      {
+        "codigo": "SIS",
+        "correlativas": [
+          "PRG1",
+          "MAT1"
+        ]
+      },
+      {
+        "codigo": "MOV",
+        "correlativas": []
+      }
+    ],
+    "comisiones": [
+      {
+        "id": "PRG2-A",
+        "materia": "PRG2",
+        "cupo": 30,
+        "franjas": [
+          {
+            "dia": 1,
+            "inicio": "19:00",
+            "fin": "21:00"
+          }
+        ]
+      },
+      {
+        "id": "BD1-A",
+        "materia": "BD1",
+        "cupo": 30,
+        "franjas": [
+          {
+            "dia": 1,
+            "inicio": "21:00",
+            "fin": "22:30"
+          }
+        ]
+      },
+      {
+        "id": "BD1-B",
+        "materia": "BD1",
+        "cupo": 30,
+        "franjas": [
+          {
+            "dia": 2,
+            "inicio": "19:00",
+            "fin": "21:00"
+          }
+        ]
+      },
+      {
+        "id": "BD1-C",
+        "materia": "BD1",
+        "cupo": 30,
+        "franjas": [
+          {
+            "dia": 1,
+            "inicio": "20:00",
+            "fin": "22:00"
+          }
+        ]
+      },
+      {
+        "id": "EST-A",
+        "materia": "EST",
+        "cupo": 30,
+        "franjas": [
+          {
+            "dia": 3,
+            "inicio": "19:00",
+            "fin": "21:00"
+          }
+        ]
+      },
+      {
+        "id": "ALG2-A",
+        "materia": "ALG2",
+        "cupo": 30,
+        "franjas": [
+          {
+            "dia": 4,
+            "inicio": "19:00",
+            "fin": "21:00"
+          }
+        ]
+      },
+      {
+        "id": "RED-A",
+        "materia": "RED",
+        "cupo": 2,
+        "franjas": [
+          {
+            "dia": 5,
+            "inicio": "19:00",
+            "fin": "21:00"
+          }
+        ]
+      },
+      {
+        "id": "SO-A",
+        "materia": "SO",
+        "cupo": 30,
+        "franjas": [
+          {
+            "dia": 6,
+            "inicio": "08:00",
+            "fin": "10:00"
+          }
+        ]
+      },
+      {
+        "id": "ING-A",
+        "materia": "ING",
+        "cupo": 30,
+        "franjas": [
+          {
+            "dia": 6,
+            "inicio": "10:00",
+            "fin": "12:00"
+          }
+        ]
+      },
+      {
+        "id": "ETI-A",
+        "materia": "ETI",
+        "cupo": 30,
+        "franjas": [
+          {
+            "dia": 6,
+            "inicio": "13:00",
+            "fin": "15:00"
+          }
+        ]
+      },
+      {
+        "id": "WEB-A",
+        "materia": "WEB",
+        "cupo": 30,
+        "franjas": [
+          {
+            "dia": 6,
+            "inicio": "15:00",
+            "fin": "17:00"
+          }
+        ]
+      },
+      {
+        "id": "TAL-A",
+        "materia": "TAL",
+        "cupo": 0,
+        "franjas": [
+          {
+            "dia": 2,
+            "inicio": "07:00",
+            "fin": "08:00"
+          }
+        ]
+      },
+      {
+        "id": "SIS-A",
+        "materia": "SIS",
+        "cupo": 30,
+        "franjas": [
+          {
+            "dia": 2,
+            "inicio": "08:00",
+            "fin": "10:00"
+          }
+        ]
+      },
+      {
+        "id": "MOV-A",
+        "materia": "MOV",
+        "cupo": 30,
+        "franjas": [
+          {
+            "dia": 2,
+            "inicio": "17:00",
+            "fin": "18:00"
+          },
+          {
+            "dia": 4,
+            "inicio": "20:00",
+            "fin": "22:00"
+          }
+        ]
+      }
+    ],
+    "inscripciones": [],
+    "solicitud": {
+      "comision": "BD1-B",
+      "instante": "2027-02-01T07:59:00-03:00"
+    }
+  },
+  "esperado": {
+    "resultado": "rechazada",
+    "motivo": "R1"
+  }
+}

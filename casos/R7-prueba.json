@@ -1,0 +1,29 @@
+{
+"caso": "ejemplo-plantilla",
+"descripcion": "Sin inscripciones previas, dentro de la ventana, materia sin correlativas",
+"entrada": {
+    "periodo": {
+        "apertura": "2027-02-01T08:00:00-03:00",
+        "cierre": "2027-02-10T23:59:00-03:00",
+        "plazo_baja": "2027-03-15T23:59:00-03:00"
+    },
+    "estudiante": {"id": "E01", "historial": []},
+    "materias": [{"codigo": "BD1", "correlativas": []}],
+    "comisiones": [
+        {"id": "BD1-A", "materia": "BD1", "cupo": 30,
+        "franjas": [{"dia": 2, "inicio": "19:00", "fin": "21:00"}]},
+
+        {"id": "BD1-B", "materia": "BD1", "cupo": 20,
+        "franjas": [{"dia": 2, "inicio": "19:00", "fin": "21:00"}]}
+    ],
+    "inscripciones": [
+        {
+        "estudiante": "E01",
+        "comision": "BD1-A",
+        "estado": "activa"
+        }
+    ],
+    "solicitud": {"comision": "BD1-B", "instante": "2027-02-03T10:00:00-03:00"}
+},
+"esperado": {"resultado": "rechazada", "motivo":"R7"}
+}
