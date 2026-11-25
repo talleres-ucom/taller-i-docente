@@ -10,7 +10,7 @@ from datetime import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-import versiones as v  # noqa: E402
+import versiones as v
 
 # La versión correcta se revela recién al correr: es la que cumple R5.
 CORRECTA = v.version_b
