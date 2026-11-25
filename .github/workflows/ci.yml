@@ -23,3 +23,6 @@ jobs:
 
       - name: Correr las pruebas
         run: uv run pytest
+
+      - name: Casos de aceptación
+        run: uvx --from "git+https://github.com/talleres-ucom/taller-I-2026#subdirectory=herramientas/verificar" arandu-verificar casos
